@@ -7,7 +7,13 @@ console.log(`Number of categories: ${allCategoryLengthEl}`)
 
 //Заголовок і кількість li
 allCategoryEl.forEach(li => {
-    const title = li.querySelector('h2').textContent
-    const countEl = li.querySelectorAll('li').length
+    const title = li.firstElementChild.textContent;
+    const countEl = li.lastElementChild.children.length;
     console.log(`Category: ${title}\nElements: ${countEl}`)
 })
+
+
+
+
+
+
